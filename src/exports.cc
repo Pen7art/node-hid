@@ -35,7 +35,7 @@ Init(Napi::Env env, Napi::Object exports)
 
     exports.Set("openAsyncHIDDevice", Napi::Function::New(env, &HIDAsync::Create, nullptr, context)); // TODO: verify context will be alive long enough
 
-    exports.Set("set_darwin_open_exclusive", Napi::Function::New(env, &set_open_exclusive));
+    exports.Set("set_darwin_open_exclusive", Napi::Function::New(env, &setOpenExclusive));
 
     exports.Set("devices", Napi::Function::New(env, &devices));
     exports.Set("devicesAsync", Napi::Function::New(env, &devicesAsync, nullptr, context)); // TODO: verify context will be alive long enough

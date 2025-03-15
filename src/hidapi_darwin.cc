@@ -1,6 +1,6 @@
 #include "hidapi_darwin.h"
 
-Napi::Value set_open_exclusive(const Napi::CallbackInfo &info)
+Napi::Value setOpenExclusive(const Napi::CallbackInfo &info)
 {
     Napi::Env env = info.Env();
 
