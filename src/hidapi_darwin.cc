@@ -11,12 +11,7 @@ Napi::Value setOpenExclusive(const Napi::CallbackInfo &info)
     }
 
     int set_exclusive_status = info[0].As<Napi::Number>().Int32Value();
-    int res = hid_darwin_set_open_exclusive(set_exclusive_status);
-    if (res < 0)
-    {
-        Napi::TypeError::New(env, "Error setting set_open_exclusive.").ThrowAsJavaScriptException();
-        return env.Null();
-    }
+    hid_darwin_set_open_exclusive(set_exclusive_status);
 
     return env.Null();
 }

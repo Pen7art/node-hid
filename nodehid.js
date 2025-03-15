@@ -202,9 +202,9 @@ class HIDAsync extends EventEmitter {
     }
 }
 
-function setDarwinOpenExclusive() {
+function setDarwinOpenExclusive(...args) {
     loadBinding();
-    return binding.setDarwinOpenExclusive.apply(HID, arguments)
+    return binding.setDarwinOpenExclusive(...args)
 }
 
 function showdevices() {
