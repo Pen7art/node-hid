@@ -36,7 +36,7 @@ export class HID extends EventEmitter {
     getDeviceInfo(): Device
 }
 
-export function setDarwinOpenExclusive(open_exclusive: boolean): void
+export function setDarwinOpenExclusive(): void
 
 export function devices(vid: number, pid: number): Device[]
 export function devices(): Device[]
